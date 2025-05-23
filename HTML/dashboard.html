@@ -1,0 +1,109 @@
+Place this below the <section class="blog-section" id="blog"> or wherever you want:
+
+<!-- Blog Dashboard Section --> <section class="blog-dashboard-section" id="blog-dashboard"> <h2 class="dashboard-title">📊 Blog <span>Dashboard</span></h2> <div class="dashboard-stats-container"> <div class="dashboard-card"> <h3>Total Posts</h3> <p>8</p> </div> <div class="dashboard-card"> <h3>Views</h3> <p>12,300</p> </div> <div class="dashboard-card"> <h3>Categories</h3> <p>4</p> </div> <div class="dashboard-card"> <h3>Drafts</h3> <p>2</p> </div> </div> <div class="dashboard-table"> <h3>📋 Recent Blog Posts</h3> <table> <thead> <tr> <th>Title</th> <th>Date</th> <th>Views</th> <th>Status</th> </tr> </thead> <tbody> <tr> <td>How I Built a Realtime Chat App</td> <td>May 2025</td> <td>3,420</td> <td>Published</td> </tr> <tr> <td>Understanding JWT Authentication</td> <td>April 2025</td> <td>2,100</td> <td>Published</td> </tr> <tr> <td>Voice Command Reels Controller</td> <td>Draft</td> <td>–</td> <td>Draft</td> </tr> </tbody> </table> </div> </section>
+Step 2: Add Styling to style.css
+
+Paste this at the end of your style.css file:
+
+
+
+<li><a href="#blog-dashboard">Dashboard</a></li>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Blog Dashboard Section */
+.blog-dashboard-section {
+padding: 4rem 1rem;
+background: #f9fafb;
+text-align: center;
+}
+
+.dashboard-title {
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 2rem;
+}
+
+.dashboard-title span::after {
+content: '';
+display: block;
+height: 4px;
+width: 100%;
+background: #6366f1;
+margin-top: 5px;
+border-radius: 2px;
+}
+
+.dashboard-stats-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 1.5rem;
+margin-bottom: 3rem;
+}
+
+.dashboard-card {
+background: white;
+padding: 1.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+color: #4f46e5;
+margin-bottom: 0.5rem;
+}
+
+.dashboard-table {
+overflow-x: auto;
+text-align: left;
+margin: 0 auto;
+max-width: 900px;
+}
+
+.dashboard-table h3 {
+margin-bottom: 1rem;
+}
+
+.dashboard-table table {
+width: 100%;
+border-collapse: collapse;
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.dashboard-table th,
+.dashboard-table td {
+padding: 1rem;
+border-bottom: 1px solid #eee;
+}
+
+.dashboard-table th {
+background: #4f46e5;
+color: white;
+}
+
+.dashboard-table tr:hover {
+background: #f1f5f9;
+}
+
+📌 Final Step: Link Navigation (Optional)
+Update your navbar in index.html to include a Dashboard link:
+    </style>
+</head>
+<body>
+    <!-- Blog Dashboard Section --> <section class="blog-dashboard-section" id="blog-dashboard"> <h2 class="dashboard-title">📊 Blog <span>Dashboard</span></h2> <div class="dashboard-stats-container"> <div class="dashboard-card"> <h3>Total Posts</h3> <p>8</p> </div> <div class="dashboard-card"> <h3>Views</h3> <p>12,300</p> </div> <div class="dashboard-card"> <h3>Categories</h3> <p>4</p> </div> <div class="dashboard-card"> <h3>Drafts</h3> <p>2</p> </div> </div> <div class="dashboard-table"> <h3>📋 Recent Blog Posts</h3> <table> <thead> <tr> <th>Title</th> <th>Date</th> <th>Views</th> <th>Status</th> </tr> </thead> <tbody> <tr> <td>How I Built a Realtime Chat App</td> <td>May 2025</td> <td>3,420</td> <td>Published</td> </tr> <tr> <td>Understanding JWT Authentication</td> <td>April 2025</td> <td>2,100</td> <td>Published</td> </tr> <tr> <td>Voice Command Reels Controller</td> <td>Draft</td> <td>–</td> <td>Draft</td> </tr> </tbody> </table> </div> </section>
+    
+</body>
+</html>
